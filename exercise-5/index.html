@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<title>Chat</title>
+<style>
+  #chat-messages {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  #chat-messages li {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+  #chat-input {
+    margin-top: 10px;
+  }
+</style>
+</head>
+<body>
+
+<ul id="chat-messages"></ul>
+<input type="text" id="chat-input" placeholder="Введите сообщение">
+<button id="send-message">Отправить</button>
+<button id="send-location">Гео-локация</button>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/exercise-4/style.css">
+<title>Timezone API Request</title>
+</head>
+<body>
+
+<div class="geo-button">
+    <button id="getTimezoneButton">Получить временную зону</button>
+</div>
+
+<div id="timezoneResult" style="margin-top: 20px;"></div>
+
+<script>
+// Функция для получения координат местоположения пользователя
+function getUserLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(function(position) {
+      // Здесь мы получаем координаты широты и долготы
+      var latitude = position.coords.latitude;
+      var longitude = position.coords.longitude;
+
+      // Отправляем запрос к Timezone API
+      fetch(`https://api.ipgeolocation.io/timezone?apiKey=32bcd4a6e4b548968e7afcdb682ac679&lat=${latitude}&long=${longitude}`)
+        .then(response => response.json())
+        .then(data => {
+          // Выводим результат на экран
+          document.getElementById('timezoneResult').textContent = `Временная зона: ${data.timezone}, Дата и время: ${data.date_time_txt}`;
+        })
+        .catch(error => {
+          // Обработка ошибок
+          console.error('Ошибка при получении данных:', error);
+        });
+    }, function() {
+      // Обработка отказа в доступе к местоположению
+      console.log('Пользователь отказался предоставить доступ к местоположению.');
+    });
+  } else {
+    // Обработка случаев, когда Geolocation API не поддерживается
+    console.log('Geolocation API не поддерживается в этом браузере.');
+  }
+}
+
+// Добавляем обработчик события клика на кнопку
+document.getElementById('getTimezoneButton').addEventListener('click', getUserLocation);
+</script>
+
+</body>
+</html>

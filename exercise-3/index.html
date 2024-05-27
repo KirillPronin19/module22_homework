@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Display User Info</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Кнопка для заопроса геопозиции  -->
+<div class="position-button">
+  <button id="userInfoButton">Показать информацию о пользователе</button>
+</div>
+  <!-- Результат запроса геопозиции  -->
+<div id="user-info" class="user-info" style="display: none;">
+  <p>Размеры экрана: ширина: <span id="screenWidth"></span>, высота: <span id="screenHeight"></span></p>
+  <p>Местоположение: <span id="userLocation"></span></p>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

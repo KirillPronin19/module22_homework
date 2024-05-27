@@ -1,0 +1,89 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Oswald";
+}
+
+h1 {
+    font-size: 65px;
+    padding-left: 190px;
+}
+/* россия  */
+.russia-flag {
+    width: 600px;
+    height: 300px;
+    background-color: rgb(245, 245, 245);
+}
+
+.russia-flag h3 {
+    text-align: center;
+    padding-top: 50px;
+}
+
+.russia-flag svg {
+    padding-left: 160px;
+}
+
+/* франция  */
+.france-flag {
+    width: 600px;
+    height: 300px;
+    background-color: rgb(245, 245, 245);
+}
+
+.france-flag h3 {
+    text-align: center;
+    padding-top: 50px;
+}
+
+.france-flag svg {
+    padding-left: 160px;
+}
+
+/* финляндия  */
+.finland-flag {
+    width: 600px;
+    height: 300px;
+    background-color: rgb(245, 245, 245);
+}
+
+.finland-flag h3 {
+    text-align: center;
+    padding-top: 50px;
+}
+
+.finland-flag svg {
+    padding-left: 160px;
+}
+
+/* швейцария  */
+.Switzerland-flag {
+    width: 600px;
+    height: 300px;
+    background-color: rgb(245, 245, 245);
+}
+
+.Switzerland-flag h3 {
+    text-align: center;
+    padding-top: 50px;
+}
+
+.Switzerland-flag svg {
+    padding-left: 160px;
+}
+
+/* япония  */
+.japan-flag {
+    width: 600px;
+    height: 300px;
+    background-color: rgb(245, 245, 245);
+}
+
+.japan-flag h3 {
+    text-align: center;
+    padding-top: 50px;
+}
+
+.japan-flag svg {
+    padding-left: 160px;
+}
